@@ -9,19 +9,54 @@
 </head>
 <body>
   <main id="stage" class="stage">
-    <div id="capsule" class="capsule">
-      <div class="paws"><i></i><i></i></div>
-      <div id="face" class="face">
+    <section id="capsule" class="capsule" aria-label="Pisho desktop island">
+      <div class="face" aria-label="Pisho">
         <div class="eye eye-left"><span class="pupil"></span></div>
         <div class="eye eye-right"><span class="pupil"></span></div>
-        <svg class="cat-mark" viewBox="0 0 90 28" aria-hidden="true">
-          <path d="M45 3 Q39 13 29 17 Q20 21 12 17 M45 3 Q51 13 61 17 Q70 21 78 17" />
-          <path d="M29 17 Q37 25 45 21 Q53 25 61 17" />
-        </svg>
-        <div id="zzz" class="zzz"><span>Z</span><span>Z</span><span>Z</span></div>
-        <div id="spirals" class="spirals"><b>◎</b><b>◎</b></div>
+        <svg class="cat-mark" viewBox="0 0 90 28" aria-hidden="true"><path d="M45 3 Q39 13 29 17 Q20 21 12 17 M45 3 Q51 13 61 17 Q70 21 78 17"/><path d="M29 17 Q37 25 45 21 Q53 25 61 17"/></svg>
       </div>
-    </div>
+      <div class="panel">
+        <header class="topline">
+          <div class="system"><span class="wifi">◔</span><span id="date">SUN 15 NOV</span></div>
+          <div class="battery"><span id="battery-level">—</span><span class="battery-track"><i></i></span></div>
+          <button class="more" id="more" aria-label="More options">•••</button>
+        </header>
+        <div class="clock-row">
+          <div class="clock-wrap"><div id="clock" class="clock">6:38</div><div id="clock-sub" class="clock-sub">Good evening</div></div>
+          <div class="status-dot"></div>
+        </div>
+        <div class="cards">
+          <article class="mini-card jobs"><div class="card-icon">▣</div><strong>Jobs today</strong><span class="muted">Nothing scheduled</span></article>
+          <article class="mini-card music"><div class="album"></div><div class="music-copy"><strong>Nothing Playing</strong><span class="muted">Media player</span></div><button id="media-play" class="round-play" aria-label="Play">▶</button></article>
+          <article class="mini-card focus"><div class="focus-time" id="focus-preview">25:00</div><div class="muted" id="focus-state">Focus · ready</div><button id="focus-start" class="round-play" aria-label="Start focus timer">▶</button></article>
+        </div>
+        <nav class="dock" aria-label="Quick navigation">
+          <button class="nav-item active" data-tab="home">⌂<span>HOME</span></button>
+          <button class="nav-item" data-tab="apps" title="Apps">▦</button>
+          <button class="nav-item" data-tab="music" title="Music">♫</button>
+          <button class="nav-item" data-tab="focus" title="Focus">◷</button>
+          <button class="nav-item" data-tab="settings" title="Settings">⚙</button>
+          <button class="nav-item" data-tab="updates" title="Updates">↻</button>
+          <button class="nav-item" data-tab="notifications" title="Notifications">♧</button>
+          <button class="nav-item" data-tab="power" title="Power">⏻</button>
+        </nav>
+        <section id="quick-panel" class="quick-panel">
+          <div class="quick-grid">
+            <button class="quick-tile"><b>▦</b><span>All Apps</span></button>
+            <button class="quick-tile"><b>✎</b><span>Customize</span></button>
+            <button class="quick-tile"><b>⚙</b><span>Settings</span></button>
+            <button class="quick-tile"><b>↻</b><span>Updates</span></button>
+            <button class="quick-tile" id="fold"><b>⌃</b><span>Fold In</span></button>
+            <button class="quick-tile quit" id="quit"><b>⏻</b><span>Quit</span></button>
+          </div>
+        </section>
+        <section id="focus-panel" class="focus-panel">
+          <div class="focus-heading"><span id="focus-large">25:00</span><span id="focus-label">Focus session</span></div>
+          <div class="timeline"><i></i><span>00</span><span>15</span><span>30</span><span>45</span><span>60</span></div>
+          <div class="focus-actions"><button id="focus-add">+5 min</button><button id="focus-stop">Stop</button><button id="focus-pause" class="primary">Start</button></div>
+        </section>
+      </div>
+    </section>
   </main>
   <script src="renderer.js"></script>
 </body>
