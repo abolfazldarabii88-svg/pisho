@@ -6,8 +6,8 @@ let expanded = false;
 let poller;
 
 const WINDOW_WIDTH = 620;
-const WINDOW_HEIGHT = 290;
-const TOP_HIT_HEIGHT = 86;
+const WINDOW_HEIGHT = 340;
+const TOP_HIT_HEIGHT = 72;
 
 function getDisplay() {
   const cursor = screen.getCursorScreenPoint();
