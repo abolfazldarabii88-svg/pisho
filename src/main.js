@@ -5,10 +5,10 @@ let win;
 let expanded = false;
 let poller;
 
-const WINDOW_WIDTH = 620;
-const WINDOW_HEIGHT = 340;
-const COLLAPSED_HIT_WIDTH = 210;
-const COLLAPSED_HIT_HEIGHT = 64;
+const WINDOW_WIDTH = 400;
+const WINDOW_HEIGHT = 300;
+const COLLAPSED_HIT_WIDTH = 156;
+const COLLAPSED_HIT_HEIGHT = 44;
 const EXPANDED_HIT_HEIGHT = WINDOW_HEIGHT;
 
 function createWindow() {
@@ -73,7 +73,7 @@ function startPointerPolling() {
       win.webContents.send('pisho:expanded', expanded);
       win.setIgnoreMouseEvents(!expanded, { forward: true });
     }
-  }, 30);
+  }, 60);
 }
 
 ipcMain.on('pisho:open-settings', (_event, kind) => {
