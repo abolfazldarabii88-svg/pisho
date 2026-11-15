@@ -1,4 +1,4 @@
-const { app, BrowserWindow, screen } = require('electron');
+const { app, BrowserWindow, screen, ipcMain, shell } = require('electron');
 const path = require('path');
 
 let win;
@@ -76,7 +76,7 @@ function startPointerPolling() {
   }, 30);
 }
 
-app.whenReady().then(createWindow);
+ipcMain.on('pisho:open-settings', (_event, kind) => {\n  if (kind === 'wifi') shell.openExternal('ms-settings:network-wifi');\n  if (kind === 'bluetooth') shell.openExternal('ms-settings:bluetooth');\n});\n\napp.whenReady().then(createWindow);
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) createWindow();
 });
