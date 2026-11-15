@@ -76,7 +76,12 @@ function startPointerPolling() {
   }, 30);
 }
 
-ipcMain.on('pisho:open-settings', (_event, kind) => {\n  if (kind === 'wifi') shell.openExternal('ms-settings:network-wifi');\n  if (kind === 'bluetooth') shell.openExternal('ms-settings:bluetooth');\n});\n\napp.whenReady().then(createWindow);
+ipcMain.on('pisho:open-settings', (_event, kind) => {
+  if (kind === 'wifi') shell.openExternal('ms-settings:network-wifi');
+  if (kind === 'bluetooth') shell.openExternal('ms-settings:bluetooth');
+});
+
+app.whenReady().then(createWindow);
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) createWindow();
 });
