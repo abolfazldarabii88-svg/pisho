@@ -39,4 +39,4 @@ body{user-select:none;font-family:Inter,"Segoe UI",Arial,sans-serif;color:#f8f8f
 .focus-mode .focus-panel{display:block;width:240px}.focus-heading{display:flex;flex-direction:column;gap:4px}.focus-heading span:first-child{font-size:34px;font-weight:750}.focus-heading span:last-child{font-size:10px;color:#b9c1d6}
 .timeline{height:37px;margin:14px 0 8px;border-top:1px solid #ffffff40;display:flex;justify-content:space-between;align-items:flex-start;padding-top:5px;color:#9ca8c4;font-size:8px}.timeline i{position:absolute;width:2px;height:14px;background:#ff6b9f;left:50%;margin-top:-6px}
 .focus-actions{display:flex;gap:6px}.focus-actions button{flex:1;border:0;border-radius:9px;padding:8px 3px;background:#ffffff17;color:#fff;font-size:9px;cursor:pointer}.focus-actions .primary{background:#fff;color:#171a28;font-weight:700}
-@media(prefers-reduced-motion:reduce){.capsule,.face,.panel,.eye{transition:none}}
+@media(prefers-reduced-motion:reduce){.capsule,.face,.panel,.eye{transition:none}.eye:after{animation:none}}
