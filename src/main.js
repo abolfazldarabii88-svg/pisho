@@ -9,7 +9,7 @@ const WINDOW_WIDTH = 620;
 const WINDOW_HEIGHT = 340;
 const COLLAPSED_HIT_WIDTH = 210;
 const COLLAPSED_HIT_HEIGHT = 64;
-const EXPANDED_HIT_HEIGHT = 320;
+const EXPANDED_HIT_HEIGHT = WINDOW_HEIGHT;
 
 function createWindow() {
   const display = screen.getPrimaryDisplay();
