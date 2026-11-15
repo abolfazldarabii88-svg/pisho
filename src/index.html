@@ -8,26 +8,33 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main id="stage" class="stage">
+  <main class="stage">
     <section id="capsule" class="capsule" aria-label="Pisho desktop island">
-      <div class="face" aria-label="Pisho">
-        <div class="eye eye-left"><span class="pupil"></span></div>
-        <div class="eye eye-right"><span class="pupil"></span></div>
-        <svg class="cat-mark" viewBox="0 0 90 28" aria-hidden="true"><path d="M45 3 Q39 13 29 17 Q20 21 12 17 M45 3 Q51 13 61 17 Q70 21 78 17"/><path d="M29 17 Q37 25 45 21 Q53 25 61 17"/></svg>
+      <div class="face" id="face" data-mood="happy" aria-label="Pisho">
+        <div class="eye eye-left"><span class="lid"></span></div>
+        <div class="eye eye-right"><span class="lid"></span></div>
       </div>
       <div class="panel">
         <header class="topline">
-          <div class="system"><span class="wifi">◔</span><span id="date">SUN 15 NOV</span></div>
-          <div class="battery"><span id="battery-level">—</span><span class="battery-track"><i></i></span></div>
-          <button class="more" id="more" aria-label="More options">•••</button>
+          <div class="system">
+            <button class="system-chip" id="wifi" title="Open Wi-Fi settings">⌁ Wi-Fi</button>
+            <button class="system-chip" id="bluetooth" title="Open Bluetooth settings">ᛒ Bluetooth</button>
+            <span id="date">SUN 15 NOV</span>
+          </div>
+          <div class="top-actions">
+            <button class="mood-button" id="mood" title="Change Pisho expression">☺</button>
+            <button class="more" id="more" aria-label="More options">•••</button>
+          </div>
         </header>
         <div class="clock-row">
-          <div class="clock-wrap"><div id="clock" class="clock">6:38</div><div id="clock-sub" class="clock-sub">Good evening</div></div>
-          <div class="status-dot"></div>
+          <div class="clock-wrap">
+            <div id="clock" class="clock">7:03</div>
+            <div id="clock-sub" class="clock-sub">Good evening</div>
+          </div>
         </div>
         <div class="cards">
-          <article class="mini-card jobs"><div class="card-icon">▣</div><strong>Jobs today</strong><span class="muted">Nothing scheduled</span></article>
-          <article class="mini-card music"><div class="album"></div><div class="music-copy"><strong>Nothing Playing</strong><span class="muted">Media player</span></div><button id="media-play" class="round-play" aria-label="Play">▶</button></article>
+          <article class="mini-card jobs"><div class="card-icon">▣</div><strong>Quick access</strong><span class="muted">Your desktop companion</span></article>
+          <article class="mini-card music"><div class="album">♫</div><div class="music-copy"><strong>Nothing Playing</strong><span class="muted">Media player</span></div><button id="media-play" class="round-play" aria-label="Play">▶</button></article>
           <article class="mini-card focus"><div class="focus-time" id="focus-preview">25:00</div><div class="muted" id="focus-state">Focus · ready</div><button id="focus-start" class="round-play" aria-label="Start focus timer">▶</button></article>
         </div>
         <nav class="dock" aria-label="Quick navigation">
