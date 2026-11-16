@@ -1,16 +1,9 @@
 # Pisho
 
-A tiny Electron desktop notch character for Windows.
+A small animated desktop capsule for Windows (Electron).
 
-## Build on GitHub
+- Run: `npm install && npm start`
+- Build installer: `npm run dist` (output in `dist/`)
+- CI: push to `main` for a Windows x64 Actions artifact.
 
-Push to `main` or run the **Build Pisho Windows installer** workflow manually. The workflow builds an x64 NSIS installer and uploads `Pisho-Setup-<version>.exe` as a workflow artifact.
-
-## Local development
-
-- Node.js 20+
-- `npm install`
-- `npm start`
-- `npm run dist`
-
-The app is an independent project and does not depend on TwinPanel.
+The app uses the uploaded Pisho implementation: a compact top-center capsule, two white oval eyes (without pupils), hover expansion, eye moods, six themes, a mock media card, a focus timer, and Wi-Fi/Bluetooth shortcuts.
