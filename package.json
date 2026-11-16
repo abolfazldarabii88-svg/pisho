@@ -1,18 +1,24 @@
 {
   "name": "pisho",
-  "version": "0.4.1",
-  "description": "Pisho - a playful desktop notch companion",
-  "main": "src/main.js",
+  "version": "0.1.0",
+  "description": "Pisho, a small animated desktop companion for Windows",
+  "main": "main.js",
   "author": "Pisho",
   "license": "MIT",
-  "scripts": { "start": "electron .", "dist": "electron-builder --win nsis" },
-  "devDependencies": { "electron": "^39.2.0", "electron-builder": "^26.0.12" },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --publish never"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
   "build": {
-    "appId": "app.pisho.desktop",
+    "appId": "com.pisho.app",
     "productName": "Pisho",
-    "directories": { "output": "dist" },
-    "files": ["src/**/*", "package.json"],
-    "win": { "target": [{ "target": "nsis", "arch": ["x64"] }], "artifactName": "Pisho-Setup-${version}.${ext}" },
-    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true, "createStartMenuShortcut": true }
+    "files": ["main.js", "preload.js", "renderer/**"],
+    "win": { "target": "nsis" },
+    "nsis": { "oneClick": true, "perMachine": false },
+    "artifactName": "Pisho-Setup-${version}.${ext}"
   }
 }
